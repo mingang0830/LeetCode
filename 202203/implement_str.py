@@ -9,9 +9,9 @@ class Solution:
         '''
 
         if needle in haystack:
-            div = len(needle)
+            div: int = len(needle)
             for idx in range(0, len(haystack)):
-                temp = haystack[idx:div]
+                temp: str = haystack[idx:div]
                 if temp == needle:
                     return idx
                 div += 1

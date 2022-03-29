@@ -13,7 +13,8 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        cursor = dummy = ListNode()  # reference
+        cursor: ListNode = ListNode()
+        dummy: ListNode = cursor  # reference
         while list1 and list2:
             if list1.val < list2.val:
                 cursor.next = list1  # 같은 값을 참조하기 때문에 dummy에도 next값이 추가(dummy.next.next...)
@@ -34,6 +35,13 @@ class Solution:
         return dummy.next  # 처음에 생성할때 만들어지는 val값 0을 제외한 next들의 값
 
 
+l1 = ListNode(1)
+l1.next = ListNode(4)
+l1.next.next = ListNode(6)
 
+l2 = ListNode(3)
+l2.next = ListNode(5)
+
+print(Solution().mergeTwoLists(l1, l2))
 
 

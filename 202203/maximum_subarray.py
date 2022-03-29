@@ -1,28 +1,30 @@
-def maxSubArray(nums):
-    if len(nums) == 1:
-        return nums[0]
+from typing import List
 
-    """
-    Time Limit Exceeded
-    
-    result = []
-    for idx in range(len(nums)):
-        div = idx + 1
-        while div <= len(nums):
-            temp = nums[idx:div]
-            result.append(sum(temp))
-            div += 1
-    return max(result)
-    """
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        """
+        Time Limit Exceeded
 
-    # Kadane’s Algorithm
-    current_subarray = max_subarray = nums[0]
+        result: List[int]= []
+        for idx in range(len(nums)):
+            div: int = idx + 1
+            while div <= len(nums):
+                temp: List[int] = nums[idx:div]
+                result.append(sum(temp))
+                div += 1
+        return max(result)
+        """
+        current_subarray: int = nums[0]
+        max_subarray: int = current_subarray
 
-    for num in nums[1:]:
+        for num in nums[1:]:
 
-        current_subarray = max(num, current_subarray + num)
-        max_subarray = max(max_subarray, current_subarray)
+            current_subarray = max(num, current_subarray + num)
+            max_subarray = max(max_subarray, current_subarray)
 
-    return max_subarray
+        return max_subarray
+
+
+
 
 
