@@ -7,9 +7,9 @@ class Solution:
         Do not return anything, modify nums1 in-place instead.
         """
 
-        n1_idx = m - 1
-        n2_idx = n - 1
-        total_idx = m + n - 1
+        n1_idx: int = m - 1
+        n2_idx: int = n - 1
+        total_idx: int = m + n - 1
         while n1_idx >= 0 and n2_idx >= 0:
             if nums1[n1_idx] >= nums2[n2_idx]:
                 nums1[total_idx] = nums1[n1_idx]
