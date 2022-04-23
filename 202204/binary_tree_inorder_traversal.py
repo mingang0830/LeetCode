@@ -30,16 +30,14 @@ class Solution:
         """
         cur: Optional[TreeNode] = root
         stack: List[TreeNode] = []  # 부모 노드 저장
-        while True:
+        while stack or cur:
             if cur:
                 stack.append(cur)
                 cur = cur.left
-            elif stack:
+            else:
                 cur = stack.pop()
                 result.append(cur.val)
                 cur = cur.right
-            else:
-                break
         return result
 
 
