@@ -33,11 +33,11 @@ class Solution:
         stack: List[TreeNode] = [root]
         while stack:
             cur = stack.pop()
-            result.insert(0, cur.val)
             if cur.left:
                 stack.append(cur.left)
             if cur.right:
                 stack.append(cur.right)
+            result.insert(0, cur.val)
 
         return result
 
