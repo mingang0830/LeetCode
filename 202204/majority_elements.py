@@ -14,10 +14,11 @@ class Solution:
             else:
                 dict_[num] += 1
             
+            # The majority element is the element that appears more than ⌊n / 2⌋ times.
             if dict_[num] > len(nums)/2:
                 return num
 
-        # return max(dict_, key=dict_.get) 
+        # return max(dict_, key=dict_.get) max value에 대한 key
 
              
 
