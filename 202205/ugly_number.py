@@ -6,22 +6,14 @@ class Solution:
             return False
         
         if n % 2 == 0:
-            if n // 2 == 1: 
-                return True
-            else: 
-                return self.isUgly(n // 2)
+            return self.isUgly(n // 2)
         elif n % 3 == 0:
-            if n // 3 == 1: 
-                return True
-            else: 
-                return self.isUgly(n // 3)
+            return self.isUgly(n // 3)
         elif n % 5 == 0:
-            if n // 5 == 1: 
-                return True
-            else: 
-                return self.isUgly(n // 5)
+            return self.isUgly(n // 5)
         else:
             return False
+
 
 
 if __name__ == "__main__":
