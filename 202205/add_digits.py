@@ -1,6 +1,3 @@
-from curses.ascii import SO
-
-
 class Solution:
     def addDigits(self, num: int) -> int:
         if(num < 10):
