@@ -2,7 +2,7 @@ import unittest
 from ransome_note import Solution
 
 
-class GuessNumberTest(unittest.TestCase):
+class CanConstructTest(unittest.TestCase):
     def test1(self):
         t = Solution().canConstruct("a", "b")
         self.assertEqual(t, False)
